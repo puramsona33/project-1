@@ -1,0 +1,44 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Puram Sona</title>
+  <link rel="stylesheet" href="./../CSS/style.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <header>
+    <h1>PURAM SONA</h1>
+    <p class="subtitle">Web Developer</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="internships.html">Internships</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <section class="social-links">
+    <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" class="btn linkedin">LinkedIn</a>
+    <a href="https://github.com/your-github-id" target="_blank" class="btn github">GitHub</a>
+    <a href="https://www.instagram.com/your-instagram-id" target="_blank" class="btn instagram">Instagram</a>
+  </section>
+
+  <script>
+    // Simple animation effect using JS
+    const bg = document.querySelector('.background-animation');
+    let hue = 0;
+    setInterval(() => {
+      hue = (hue + 1) % 360;
+      bg.style.background = `linear-gradient(120deg, hsl(${hue}, 80%, 90%), hsl(${(hue+60)%360}, 80%, 90%))`;
+    }, 50);
+  </script>
+  <script src="./../JS/script.js"></script>
+</body>
+</html>
