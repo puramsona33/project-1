@@ -1,0 +1,175 @@
+/* Common Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 50px;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+h1, h2 {
+  text-align: center;
+  margin: 20px;
+}
+.section {
+  margin-bottom: 60px;
+}
+
+/* ======================
+   Background Styles
+====================== */
+.bg-box {
+  margin: 20px auto;
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.bgcolor {
+  background-color: antiquewhite;
+}
+.bgimage {
+  background-image: url('./images/image.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* ======================
+   Relative Units
+====================== */
+.parentBox {
+  margin: 20px auto;
+  width: 500px;
+  height: 500px;
+  border: 3px solid black;
+  background-color: rgb(226, 16, 79);
+  font-size: 30px;
+}
+.childBox {
+  height: 200px;
+  width: 200px;
+  border: 3px solid black;
+  background-color: rgb(16, 169, 216);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  margin: 20px auto;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(29, 190, 77);
+  font-size: 30px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .box {
+    height: 300px;
+    width: 200px;
+    font-size: 100px;
+    background-color: aquamarine;
+    border-width: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .box {
+    background-color: rgb(33, 16, 190);
+  }
+}
+
+/* ======================
+   Transitions + Transformations
+====================== */
+.container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .box {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+/* Rotate */
+.box1 {
+  background-color: lightcoral;
+  transition: transform 3s ease-in-out 2s;
+}
+.box1:hover {
+  transform: rotate(30deg);
+}
+
+/* Translate */
+.box2 {
+  background-color: rgb(48, 204, 16);
+  transition: transform 3s linear 1ms;
+}
+.box2:hover {
+  transform: translate(150px, 150px);
+  box-shadow: 4px 8px 3px black;
+  border: none;
+}
+
+/* Skew */
+.box3 {
+  background-color: rgb(143, 143, 189);
+  transition: transform 3s ease-in-out 2s;
+}
+.box3:hover {
+  transform: skew(40deg);
+}
+
+/* Scale */
+.box4 {
+  background-color: rgb(122, 182, 197);
+  transition: transform 3s ease-in 2s;
+}
+.box4:hover {
+  transform: scale(1.5);
+}
+
+/* ======================
+   Animations
+====================== */
+.animation-box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  border: 2px solid black;
+  margin: 50px auto;
+  animation: moveBox 5s infinite ease-in-out;
+}
+
+@keyframes moveBox {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(200px, 0);
+  }
+  75% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
